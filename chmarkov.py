@@ -3,6 +3,7 @@ from numpy.random import choice
 
 import dataset.cs1110fa18 as cs1110
 import dataset.cs4410sp20 as cs4410
+import dataset.cs4820fa20 as cs4820
 
 
 CHAR = False
@@ -13,15 +14,12 @@ class Markov:
         if CHAR:
             # Char level
             self.vocab = set(text)
-            self.smoothing_factor = smoothing_factor
-            self.counts = {c: Counter() for c in self.vocab}
-            self.process(text)
         else:
             # Word level
             self.vocab = set(text.split())
-            self.counts = {c: Counter() for c in self.vocab}
-            self.smoothing_factor = smoothing_factor
-            self.process(text)
+        self.counts = {c: Counter() for c in self.vocab}
+        self.smoothing_factor = smoothing_factor
+        self.process(text)
 
     def process(self, text):
         if CHAR:
@@ -41,6 +39,9 @@ class Markov:
     def generate_next(self, char):
         smoothing = Counter({c: self.smoothing_factor for c in self.vocab})
         total_weights = dict(smoothing + self.counts[char])
+        print(self.counts)
+        print(self.counts[char])
+        print(total_weights)
 
         chars = list(self.vocab)
         total_mass = sum(total_weights.values())
@@ -52,10 +53,10 @@ class Markov:
         return next_char
 
 
-data = cs4410.data
-sample_text = "\n".join(data)
-sample_text += "\n" + "\n".join(cs1110.data)
+sample_text = "\n".join(cs4410.data) + \
+    "\n".join(cs1110.data) + "\n".join(cs4820.data)
 sample_text = sample_text.lower()
+sample_text = "hello world good bye world"
 # m = Markov(sample_text, 0.0002)
 m = Markov(sample_text, 0.0000002)
 
@@ -68,7 +69,7 @@ if CHAR:
 else:
     # word level
     word = "the"
-    word = "we"
+    word = "hello"
     text = ''
     for i in range(30):
         text += word + ' '

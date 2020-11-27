@@ -5,6 +5,7 @@ import requests
 from requests_html import HTMLSession
 import userdata
 
+# DOES NOT WORK AT ALL
 
 # session = requests.Session()
 # s = session.post("https://piazza.com/class", data=userdata.data, cookies=userdata.cookies)
