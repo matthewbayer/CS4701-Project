@@ -14,7 +14,12 @@ CHAR = False
 # should be greater than or equal to 1
 # shouldn't be larger than 5 or else would always choose transition randomly or
 # repeat dataset
-ORDER = 3
+ORDER = 1
+
+# smoothing for markov chain
+# must be > 0
+# should be less than 0.00001 for order 2
+SMOOTH = 0.00001
 
 
 class Markov:
@@ -68,7 +73,7 @@ class Markov:
 sample_text = "\n".join(cs4410.data) + \
     "\n".join(cs1110.data) + "\n".join(cs4820.data)
 sample_text = sample_text.lower()
-m = Markov(sample_text, 0.0000001, ORDER)
+m = Markov(sample_text, SMOOTH, ORDER)
 
 if CHAR:
     # char level
