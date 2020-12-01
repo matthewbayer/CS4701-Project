@@ -5,21 +5,22 @@ import itertools
 import dataset.cs1110fa18 as cs1110
 import dataset.cs4410sp20 as cs4410
 import dataset.cs4820fa20 as cs4820
+import dataset.cs4700sp20 as cs4700
 
 # switch for either character (True) or word level (False)
-CHAR = False
+CHAR = True
 
 # markov chain of order ORDER
 # how many past words/chars are in the state
 # should be greater than or equal to 1
 # shouldn't be larger than 5 or else would always choose transition randomly or
 # repeat dataset
-ORDER = 1
+ORDER = 25
 
 # smoothing for markov chain
 # must be > 0
 # should be less than 0.00001 for order 2
-SMOOTH = 0.00001
+SMOOTH = 0.00002
 
 
 class Markov:
@@ -70,15 +71,15 @@ class Markov:
         return next_char
 
 
-sample_text = "\n".join(cs4410.data) + \
-    "\n".join(cs1110.data) + "\n".join(cs4820.data)
+sample_text = "\n".join(cs4410.data) + "\n".join(cs1110.data) + \
+    "\n".join(cs4820.data) + "\n".join(cs4700.data)
 sample_text = sample_text.lower()
 m = Markov(sample_text, SMOOTH, ORDER)
 
 if CHAR:
     # char level
     text = list(m.states[choice(len(m.states))])
-    for i in range(ORDER, ORDER * 100):
+    for i in range(ORDER, 150):
         state = tuple(text[i - ORDER:])
         text += m.generate_text(state)
     text = "".join(text)
@@ -87,7 +88,7 @@ if CHAR:
 else:
     # word level
     text = list(m.states[choice(len(m.states))])
-    for i in range(ORDER, ORDER * 30):
+    for i in range(ORDER, 30):
         state = tuple(text[i - ORDER:])
         text.append(m.generate_text(state))
     text = " ".join(text)
