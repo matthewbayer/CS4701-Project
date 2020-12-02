@@ -6,21 +6,28 @@ import dataset.cs1110fa18 as cs1110
 import dataset.cs4410sp20 as cs4410
 import dataset.cs4820fa20 as cs4820
 import dataset.cs4700sp20 as cs4700
+import dataset.cs4620fa20 as cs4620
+import dataset.cs2110sp19 as cs2110
 
 # switch for either character (True) or word level (False)
-CHAR = True
+CHAR = False
 
 # markov chain of order ORDER
 # how many past words/chars are in the state
 # should be greater than or equal to 1
 # shouldn't be larger than 5 or else would always choose transition randomly or
 # repeat dataset
-ORDER = 25
+ORDER = 3
 
 # smoothing for markov chain
 # must be > 0
 # should be less than 0.00001 for order 2
-SMOOTH = 0.00002
+SMOOTH = 0.000004
+
+# input text to override random state
+# order needs to be less than or equal to length of TEXT
+# set to None for random state
+TEXT = "Are we allowed"
 
 
 class Markov:
@@ -72,13 +79,18 @@ class Markov:
 
 
 sample_text = "\n".join(cs4410.data) + "\n".join(cs1110.data) + \
-    "\n".join(cs4820.data) + "\n".join(cs4700.data)
+    "\n".join(cs4820.data) + "\n".join(cs4700.data) + \
+    "\n".join(cs4620.data) + "\n".join(cs2110.data)
 sample_text = sample_text.lower()
 m = Markov(sample_text, SMOOTH, ORDER)
 
+if TEXT != None:
+    text = TEXT.lower().split()
+else:
+    text = list(m.states[choice(len(m.states))])
+
 if CHAR:
     # char level
-    text = list(m.states[choice(len(m.states))])
     for i in range(ORDER, 150):
         state = tuple(text[i - ORDER:])
         text += m.generate_text(state)
@@ -87,7 +99,6 @@ if CHAR:
     print(m.fail)
 else:
     # word level
-    text = list(m.states[choice(len(m.states))])
     for i in range(ORDER, 30):
         state = tuple(text[i - ORDER:])
         text.append(m.generate_text(state))

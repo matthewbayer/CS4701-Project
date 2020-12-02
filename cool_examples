@@ -18,7 +18,18 @@ the python tutor is unclear in how it should be o(nlogn)? or does it have nothin
 [order = 3, smoothing = 0.0000018]
 (3) is using if/else or if/elif/else for signalling/broadcasting in _leave functions incorrectly. using if/else for signalling is as follows: if <recruiter condition holds>: <signal cs student> if .... now, consider
 
+[order = 3, text = "I'm really confused", smoothing = 0.000005]
+i'm really confused about how to watch lectures starting on monday and moving ahead. i would like to have answered before the final. hope everyone is doing well! question on
 
+i'm really confused about how do we know which block does data start on how can we deal with the case when size is 0? according to my print statements
+
+i'm really confused about how to think about how you want to make sure, when we prove that problem a is np-hard and a in np. so can we understand
+
+[order = 3, text = "I'm really confused", smoothing = 0.0000045]
+i'm really confused about how to find the nuance, but the difference still exists. will 4c be auto graded? or should we modify atime and mtime weird opt(i-1)? fulkerson greatest
+
+[order = 3, text = "Are we allowed"]
+are we allowed to modify parts of the course academic integrity policy (see the website). if you wish topic, instanceof, q.09 sum". (cin, int? pmult signaled? data) command) 6 comparable?
 ==
 Markov char level:
 
