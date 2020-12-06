@@ -2374,10 +2374,6 @@ Is the attached image the expected behavior when running the "stress test" in th
 Hi I've been following @917 and transforming the pixel coordinates with M-inverse, getting a new vector v. Then I apply g (but only to the first two coordinates of v). Then I transform back to pixel coordinates with M. I've been getting this image. 
 
 It looks less distorted, but it's scaled too much. Does anyone have any advice on how to get it to not be so zoomed in?""",
-    """Undistort Scaling Too Much?
-Hi I've been following @917 and transforming the pixel coordinates with M-inverse, getting a new vector v. Then I apply g (but only to the first two coordinates of v). Then I transform back to pixel coordinates with M. I've been getting this image. 
-
-It looks less distorted, but it's scaled too much. Does anyone have any advice on how to get it to not be so zoomed in?""",
     """Not sure if White Balance is right
 Hi. How can we be sure our white balance is correct. Mine looks like it has this blue-green tint and is most certainly darker than the picture posted in @889. I'm fairly confident in my implementation and values, is it clear I'm doing something wrong?""",
     """Unable to submit a3 source on CMS
