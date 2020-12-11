@@ -44,34 +44,6 @@ FInal_Submission_Guidelines_.docx
 Please also  see @1210_f3 regarding the policy for exams submitted past the exam time.
 
 """,
-        """ FInal exam time, length, guidelines for submission, etc. --- PLEASE READ THE ATTACHED DOCUMENT
-Dear all,
-
-this message has attached two files -- they are identical in content, and differ only in format (one is PDF, the other Word).
-
-They contain detailed guidelines for the final exam.
-
-I am on purpose not telling you much  about it in this text, (diabolical, I know...) so that you will read the instructions in the file: finding out on the day of the exam that there is something you don't understand would be stressful and burn useful time for you.
-
-The  high order bit is that we are trying to make the logistics of taking the exam  as easy as possible. In particular, you will not have to be connected to the internet during the length of the exam, except for downloading and uploading the exam.
-
-Now, you may ask, why two files? Though we recommend, if possible, that you enter your answer in the fillable PDF we will provide, you will also have an option to complete your answers in Word, and then generate a PDF (and more) . The two different file allow you to test features that you may depend on t during the test  (e.g., whether your PDF reader has any trouble  filling a text box).
-
-Please take a moment NOW to think about how you want to take your exam (filling a PDF, using Word, using pen and paper) and make sure now that you have down all the logistics to execute on your plan.
-
-So, please read the attached guidelines. And, if some things are unclear, now is the time to ask (well, maybe tomorrow morning... :-) )
-
-Take good care,
-
-   L.
-
-FInal_Submission_Guidelines_.pdf
-
-FInal_Submission_Guidelines_.docx
-
-Please also  see @1210_f3 regarding the policy for exams submitted past the exam time.
-
-""",
         """Two exams, with solutions
 Dear all,
 
@@ -236,7 +208,6 @@ For 1, let's say all of the threads execute their READ instructions at the same 
 
 Getting 2 can happen in an intermediary between the above two cases - two threads can both write 1, and the last one correctly increments to write 2.""",
         """ For the question d, why the possible values could be 1, 2, 3?""",
-        """ I'm a little confused how thrashing occurs if WSi > # frames. I understand that the working set is the set of referenced mappings between pages and frames but don't fully understand how increasing the working set would result in more page faults""",
         """ The minimum is 2 for no-TLB, no-cache, single-level page table because we have to read a page of the page table to get a physical address and then read the data corresponding to the physical address. Without a TLB or a cache, we can't really improve this.
 
 In the two-level page table, no-TLB, user data cache scenario, the minimum is also 2; we read a page form each level of the page table to get a physical address, and then a cache hit stops us from performing the third memory access.
@@ -313,10 +284,6 @@ resolved
 What do we set the type of the inode to when it is free?
 
 I am not sure how to set the type of the inode in this function""",
-        """ Which PDF type for MS word in exam?
-If we type our answers into the docx file for the exam using MS word, which pdf option should we choose while saving? Does it matter?
-
-""",
         """ I think the check is verifying that you used good practices (i.e. the guidelines from the commandments of synchronization) and that your implementation is actually correct (that you didn't just get lucky passing the auto-grader for a given pattern of threads).
 
 As a side note, I would make sure your part 1 is correct because when I was getting 5/10 on part 2, it was actually because of a subtle bug in part 1 (even though I was getting 40/40 on the auto-grader).""",
@@ -325,15 +292,9 @@ As a side note, I would make sure your part 1 is correct because when I was gett
 i’m working on A4 and i’m worried that i won’t be able to finish. I have been studying for the final and assuming I were to receive an average score on the exam I was wondering if it would still be possible to pass the class without finishing the perfect 60/60 on A4 (I'm taking it S/U, I'm just really worried that I may not pass) Thank you!!
 
 """,
-        """part 3 grading
-How is our part 3 graded? We do 3 things, implement the writer threads, conduct experiments, and explain the experiment results?  """,
         """ I think for that it's just a bonus question, so they're just looking for a solid set of experiments and conclusions from said experiments: if the explanations are useful in showing why there's a difference in performance, and what that difference is, between the two lock types, you should be fine in getting all the points.""",
         """ Final Final date
 What is the final date? The prof said we have a flexible window for the actual duration of the exam, but what is the time frame (which date and how many hours) within which we can start and end?
-
-""",
-        """ part3 grading
-How is our part 3 graded? We do 3 things, implement the writer threads, conduct experiments, and explain the experiment results?
 
 """,
         """ Prelim 1 Grading scale
@@ -2057,12 +2018,6 @@ Hi,
 How many frames are there for q08, and how fast should we expect our engine to go?
 
 Thanks!""",
-        """Virtual Office Hours
-Hi,
-
-Are there any virtual office hours this week, or will they start next week? Different courses seem to be approaching this in different ways.
-
-Thanks!""",
         """Daily Post: March 31st
 I hope you are enjoying Spring Break -- be safe! I for one am looking forward to seeing you soon.
 
@@ -2079,10 +2034,6 @@ I'm confused about the expected behavior when running q09. What is expected to h
 Can someone provide an example of what would get printed when running a successful q09?""",
         """updated syllaus
 will an updated syllabus be provided as classes are starting soon?""",
-        """Lecture Times
-Have online lecture times been decided yet, and if so where do we access the zoom links. (Will there be a zoom tab in canvas?)
-
-Or, will lectures take place in an asynchronous fashion (with prerecorded videos to view at our convenience)?""",
         """Testing A3
 What's a good way to test q06 - q11? (Besides ensuring that when we run the file, it ends)""",
         """A2 Q5: Common mistakes and Rubric
@@ -2492,10 +2443,6 @@ Are the WS Page replacement and the PFF page replacement two separate ways of de
 See you later today,
 
   L.""",
-        """Disk Parallelism
-On a given disk it seems that there is a head for each surface, is that true?
-
-And if so can only one head on the disk be active at a given time or can multiple surfaces on a single disk be read at the same time?""",
         """Inverted page tables and shared memory
 Can an inverted page table support memory shared by different processes? If so, how? My assumption is that each PTE in an inverted page table would have space to store only one (VPN,PID) pair, which seems to make sharing impossible without some other mechanism.""",
         """Transfer Time Calculation from Last Lecture (4/23)
@@ -3127,8 +3074,6 @@ It seems to me that the read_block() and write_block() functions are significant
 First, am I missing anything that'd make this false, and if not, could we define macros for these improved functions and use them?""",
         """Do we have 4 or 6 slip days?
 As above""",
-        """part3 grading
-How is our part 3 graded? We do 3 things, implement the writer threads, conduct experiments, and explain the experiment results? """,
         """Final Final date
 What is the final date? The prof said we have a flexible window for the actual duration of the exam, but what is the time frame (which date and how many hours) within which we can start and end?""",
         """Bitmap
@@ -3375,19 +3320,6 @@ For the bonus part, shall we implement a lock that avoids writer starving (same 
         """Fun snippit from the textbook""",
         """final question 6
 why do you call receive.V in print exam, and print.V in receive exam?""",
-        """final 3 disk scheduling
-
-
-why FCFS doesn't has the property of exploit locality?
-
-why Elevator doesn't provide fairness?""",
-        """Is there going to be an automatic drop in the lowest exam score?
-Do we need to formally email the faculties to drop one of our grades or it is going to be automatically done?""",
-        """2017 prelim q7(d)
-
-
-As the answer stated, it will need the entire 2^10 top level translation table (use one of it and leaving the rest invalid) and 8 entries of the second-level. This means it should be 16KB(top level) + 8(number of entries) * 4byte(for each entry).
-Why the answer used one page for merely 8 entries rather than using the exact size? Should the memory page based here?""",
         """problem 2.ii on practice final
 for problem 2.ii on practice final, could someone explain this part of the solution: "The program's address space consists of 1024 pages, thus we need we need 16 third-level page tables. Therefore we need 16 entries in a 2nd level page table, and one entry in the first level page table. " ?""",
         """Calculating Page Overhead
