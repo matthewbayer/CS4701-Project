@@ -24,7 +24,7 @@ ORDER = 3
 # smoothing for markov chain
 # must be > 0
 # should be less than 0.00001 for order 2
-SMOOTH = 0.00000000001
+SMOOTH = 0.00000018
 
 # percent of data to be used in training set
 SPLIT = 0.9
@@ -53,10 +53,6 @@ for text in xTr:
 
 m = Markov(train_text.lower(), SMOOTH, CHAR, ORDER)
 
-# predictions = []
-# for text in xTe:
-#     text = ' '.join(text.split()[:START])
-#     predictions += [m.generate(text)]
 predictions = [m.generate(' '.join(text.split()[:START]))
                for text in xTe]
 

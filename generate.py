@@ -18,17 +18,17 @@ CHAR = False
 # should be greater than or equal to 1
 # shouldn't be larger than 5 or else would always choose transition randomly or
 # repeat dataset
-ORDER = 1
+ORDER = 3
 
 # smoothing for markov chain
 # must be > 0
 # should be less than 0.00001 for order 2
-SMOOTH = 0.0000001
+SMOOTH = 0.00000018
 
 # input text to override random state
 # order needs to be less than or equal to length of TEXT
 # set to None for random state
-TEXT = "what is a grace period?"
+TEXT = None
 
 sample_text = "\n".join(cs4410.data) + "\n".join(cs1110.data) + \
     "\n".join(cs4820.data) + "\n".join(cs4700.data) + \
@@ -39,25 +39,3 @@ m = Markov(sample_text, SMOOTH, CHAR, ORDER)
 result = m.generate(TEXT)
 print(result[0])
 print(result[1])
-
-# if TEXT != None:
-#     text = TEXT.lower().split()
-# else:
-#     text = list(m.states[np.random.choice(len(m.states))])
-
-# if CHAR:
-#     # char level
-#     for i in range(ORDER, 150):
-#         state = tuple(text[i - ORDER:])
-#         text += m.generate_text(state)
-#     text = "".join(text)
-#     print(text)
-#     print(m.fail)
-# else:
-#     # word level
-#     for i in range(ORDER, 30):
-#         state = tuple(text[i - ORDER:])
-#         text.append(m.generate_text(state))
-#     text = " ".join(text)
-#     print(text)
-#     print(m.fail)

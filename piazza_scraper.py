@@ -5,7 +5,10 @@ import requests
 from requests_html import HTMLSession
 import userdata
 
-# DOES NOT WORK AT ALL
+"""
+Attempt at web scraping Piazza
+This does not work, because Piazza uses Javascript to retrieve post data
+"""
 
 # session = requests.Session()
 # s = session.post("https://piazza.com/class", data=userdata.data, cookies=userdata.cookies)

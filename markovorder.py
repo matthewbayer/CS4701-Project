@@ -7,6 +7,7 @@ class Markov:
         """
         text: training data
         smoothing factor: must be > 0, should be very small or else would just randomly choose 
+        char: True if character
         order: must be >= 1, larger than 5 would repeat corpus
         """
         self.char = char
@@ -73,9 +74,7 @@ class Markov:
             # word level
             for i in range(len(text), length):
                 state = tuple(text[i - self.order:])
-                # print(state)
                 result = self.generate_text(state)
-                # print(result)
                 text.append(result)
             text = " ".join(text)
             return text, self.fail

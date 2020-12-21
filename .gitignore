@@ -2,3 +2,5 @@ __pycache__/
 userdata.py
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+chmarkov.py
+markov.py
